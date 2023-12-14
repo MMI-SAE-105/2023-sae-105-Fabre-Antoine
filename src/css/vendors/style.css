@@ -9,7 +9,7 @@
 
 /* Règles de layout */
 @import url('/src/css/layout/footer.css');
-@import url('/src/css/layout/header.css');
+@import url('/src/css/layout/header.css');;
 @import url('/src/css/layout/section.css');
 
 /* Règles des composants */
