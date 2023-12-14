@@ -8,4 +8,14 @@
 .header {
   background-color: #1A1A1A;
   padding: 10px;
+  
+}
+.header__button {
+  padding: 30px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  float : right;
+
+  
 }
