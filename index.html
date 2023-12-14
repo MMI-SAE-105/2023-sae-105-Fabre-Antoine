@@ -4,50 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/vendors/style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div>
-            <img src="public/icones/align-justify.svg" alt="bouton menu">
-            <p>Exposition Eisenman</p>
-            <ul>
-                <li>
-                    <a href="informations.html">L'Exposition</a>
-                </li>
-                <li>
-                    <a href="presentation.html">Les Oeuvres</a>
-                </li>
-                <li>
-                    <a href="/">Projets</a>
-                </li>
+            <a class="header__button-link" href="/">
+            <img class="header__button" src="public/icones/align-justify.svg" alt="bouton menu">
+            </a>
+            <p class="titre__site">Exposition Eisenman</p>
+            <nav class="header__menu menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="informations.html">L'Exposition</a></li>
+                <li class="menu__item"><a href="presentation.html">Les Oeuvres</a></li>
+                <li class="menu__item"><a href="/">Projets</a></li>
             </ul>
-            <ul>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="/">Horaires</a></li>
-                <li><a href="/">Tarifs</a></li>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="./contact.html">Contact</a></li>
+                <li class="footer__item"><a href="/">Horaires</a></li>
+                <li class="footer__item"><a href="/">Tarifs</a></li>
             </ul>
-            <ul>
-                <li>
+            <ul class="footer__reseaux">
+                <li class="icones__reseaux--link">
                     <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
                         <img
-                        class="icones_instagram"
+                        class="icones__reseaux"
                         src="public/icones/instagram.svg"
                         alt="icone instagram"
                     /></a>
                   </li>
-                  <li>
+                  <li class="icones__reseaux--link">
                     <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
                         <img
-                        class="icones_twitter"
+                        class="icones__reseaux"
                         src="public/icones/twitter.svg"
                         alt="icone twitter"
                     /></a>
                   </li>
-                    <li>
+                    <li class="icones__reseaux--link">
                         <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
                             <img
-                            class="icones_facebook"
+                            class="icones__reseaux"
                             src="public/icones/facebook.svg"
                             alt="icone facebook"
                         /></a>
