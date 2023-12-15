@@ -1,0 +1,63 @@
+.carrousel_parent-ecrans {
+    display: flex;/* aligne horizontalement les enfants */
+    width:100%;/* largeur du parent */
+    overflow-x: scroll; /* permet de scroller horizontalement */
+    scroll-behavior: smooth; /* animation de défilement */
+    scroll-snap-type: x mandatory; /* permet de scroller par blocs */
+    max-width: 374px; /* largeur maxi du parent */
+    margin-bottom: 20px;
+    height: auto;
+  }
+  .carrousel_ecran {
+    width: 100%;/* largeur du parent pour chaque enfant */
+    flex: none;/* permet de garder toute la largeur du parent */
+    scroll-snap-align: start; /* aligne les blocs sur le début */
+  }
+  .carrousel_ecran figure {
+      margin: 0;/* enlève les marges par défaut */
+  }
+  .carrousel {
+    position: relative;
+  }
+  
+  .carrousel_btn {
+    position: absolute;
+    top: 50%;
+    top: calc(min(500px, 100vw) / 16 * 9 / 2 + 1rem); /* centre verticalement ~50% vertical */
+    transform: translateY(-50%); /* methode du point mort */
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    color: #ffffff;
+  }
+  
+  .carrousel_btn-avant {
+    left: 0;
+  }
+  
+  .carrousel_btn-apres {
+    right: 0;
+  }
+  figcaption {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    }
+    .fig__img{
+        width: 375px;
+        height: 300px;
+    }
+  

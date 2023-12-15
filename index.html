@@ -63,72 +63,80 @@
         <img class="image" src="public/img/Peter-eisenman1.webp" alt="">
     </div>
     <h2>L'Exposition</h2>
-    <div class="carrousel">
-        <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">
+    <div class="carrousel" x-data="{hrefCourant: '#ecran-1',}" >
+        <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"
+        @click="$refs.parent.scrollBy(-$refs.parent.clientWidth, 0)">
             &lt;        
         </button>
-        <button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">
+        <button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant"
+        @click="$refs.parent.scrollBy ($refs.parent.clientWidth, 0)">
             >
         </button>
-        <div 
-            class="carrousel_parent-ecrans">
+        <div class="carrousel_parent-ecrans"
+        x-ref="parent"
+        @scroll.debounce.250ms.passive="
+        hrefCourant = '#'+
+                          [...$refs.parent.children]
+                           .find(e=>e.getBoundingClientRect().x>=0)
+                           .id
+                                             ">
             <div id="ecran-1" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/Fondation-cartier-1.webp" alt="image ecran 1">
+                <figure class="fig">
+                    <img class="fig__img" src="public/img/Fondation-cartier-1.webp" alt="image ecran 1">
                     <figcaption>informations</figcaption>
                 </figure>
              </div>
             <div id="ecran-2" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/Peter-eisenman1.webp" alt="image ecran 2">
+                <figure class="fig">
+                    <img class="fig__img" src="public/img/Peter-eisenman1.webp" alt="image ecran 2">
                     <figcaption>Qui est Peter Eisenman?</figcaption>
                 </figure>
             </div>
             <div id="ecran-3" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/memorial-1.webp" alt="image ecran 3">
+                <figure class="fig" >
+                    <img class="fig__img" src="public/img/memorial-1.webp" alt="image ecran 3">
                     <figcaption>Mémorial de Berlin</figcaption>
                 </figure>
             </div>
             <div id="ecran-4" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/musee-hongrois-1.webp" alt="image ecran 4">
+                <figure class="fig" >
+                    <img class="fig__img" src="public/img/musee-hongrois-1.webp" alt="image ecran 4">
                     <figcaption>Musee Transports Hongrois</figcaption>
                 </figure>
             </div>
             <div id="ecran-5" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/stdium-1.webp" alt="image ecran 5">
+                <figure class="fig" >
+                    <img class="fig__img" src="public/img/stdium-1.webp" alt="image ecran 5">
                     <figcaption>State Farm Stadium</figcaption>
                 </figure>
             </div>
             <div id="ecran-6" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/cite-culture-1.webp" alt="image ecran 6">
+                <figure class="fig" >
+                    <img class="fig__img" src="public/img/cite-culture-1.webp" alt="image ecran 6">
                     <figcaption>Cité Culture Galice</figcaption>
                 </figure>
             </div>
             <div id="ecran-7" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/musee-holocauste-1.webp" alt="image ecran 7">
+                <figure class="fig">
+                    <img class="fig__img" src="public/img/musee-holocauste-1.webp" alt="image ecran 7">
                     <figcaption>Musée de l'Holocauste</figcaption>
                 </figure>
             </div>
             <div id="ecran-8" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/archeo-parc-1.webp" alt="image ecran 8">
+                <figure class="fig">
+                    <img class="fig__img" src="public/img/archeo-parc-1.webp" alt="image ecran 8">
                     <figcaption>Archéo-Parc Yenikapi</figcaption>
                 </figure>
             </div>
             <div id="ecran-9" class="carrousel_ecran">
                 <figure>
-                    <img src="public/img/musee-guggenheim-1.webp" alt="image ecran 9">
+                    <img class="fig__img" src="public/img/musee-guggenheim-1.webp" alt="image ecran 9">
                     <figcaption>Musée Guggenheim</figcaption>
                 </figure>
             </div>
             <div id="ecran-10" class="carrousel_ecran">
                 <figure>
-                    <img src="public/img/centre-culturel-1.webp" alt="image ecran 10">
+                    <img class="fig__img" src="public/img/centre-culturel-1.webp" alt="image ecran 10">
                     <figcaption>Centre culturel Taichung</figcaption>
                 </figure>
             </div>
