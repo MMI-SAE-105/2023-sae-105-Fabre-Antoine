@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
-<body>
-    
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    <header class="header">  
+        <div class="header__menu"> 
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu"
+            @click="menuIsOpen = !menuIsOpen">
+
+            </a>
+            <p class="titre__site">Exposition Eisenman</p>  
+            
+            <nav class="header__menu menu" :class="{actif: menuIsOpen}" x-show="menuIsOpen" >
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="/">Projets</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="./contact.html">Contact</a></li>
+                <li class="footer__item"><a href="/">Horaires</a></li>
+                <li class="footer__item"><a href="/">Tarifs</a></li>
+            </ul>
+            <ul class="footer__reseaux">
+                <li class="icones__reseaux--link">
+                    <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/instagram.svg"
+                        alt="icone instagram"
+                    /></a>
+                  </li>
+                  <li class="icones__reseaux--link">
+                    <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/twitter.svg"
+                        alt="icone twitter"
+                    /></a>
+                  </li>
+                    <li class="icones__reseaux--link">
+                        <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                            <img
+                            class="icones__reseaux"
+                            src="public/icones/facebook.svg"
+                            alt="icone facebook"
+                        /></a>
+                    </li>
+            
+            </ul>
+            </nav>
+        </div>
+    </header>
+<div>
+    <img class="image__top" class="image" src="public/img/musee-hongrois-1.webp" alt="musee-hongrois-1">
+    <article>
+        <h1>Musée Hongrois Transport</h1>
+        <p>À Budapest, le Musée Hongrois des Transports, ou Közlekedési Múzeum en hongrois, est une institution captivante qui met en valeur l'histoire et l'évolution des transports en Hongrie. Voici une brève présentation de son architecture :
+            Conception Architecturale : Le Musée Hongrois des Transports est logé dans un bâtiment historique du début du XXe siècle qui ajoute une atmosphère distincte à l'expérience muséale. Son architecture extérieure reflète une combinaison de styles, avec des éléments néoclassiques et Art nouveau qui donnent au musée une présence visuelle unique.
+            Les Expositions Extérieures : En plus de son bâtiment principal, le musée dispose d'une vaste zone extérieure qui expose divers moyens de transport, des locomotives aux avions. Cette configuration extérieure crée une atmosphère immersive, permettant aux visiteurs de voir et même d'explorer certains des véhicules historiques.
+            </p>
+        <img class="image" src="public/img/musee-hongrois-2.webp" alt="musee-hongrois-2">
+        <p>L'Expansion Moderne : Le musée a subi des rénovations et des expansions au fil des ans pour répondre aux besoins d'une collection en constante croissance. Les ajouts modernes ont été intégrés de manière harmonieuse, créant une fusion intéressante entre l'ancien et le nouveau.
+            L'Expérience Intérieure : À l'intérieur, l'architecture du musée offre un espace adapté à la présentation d'une variété impressionnante d'objets liés aux transports. Les espaces d'exposition sont conçus de manière à guider les visiteurs à travers les différentes époques du transport hongrois, offrant une expérience chronologique et thématique.
+            Le Caractère Éducatif : L'architecture du Musée Hongrois des Transports est également pensée pour faciliter l'éducation. Des salles interactives, des simulateurs et des installations multimédias offrent aux visiteurs une expérience d'apprentissage immersive et divertissante.</p>
+        <img class="image" src="public/img/musee-hongrois-3.webp" alt="musee-hongrois-3">
+        <p>Engagement Envers le Futur : En tant que gardien de l'histoire des transports, le musée reconnaît également l'importance de l'innovation et de l'avenir. Des sections dédiées à la technologie moderne et aux développements futurs dans les transports permettent au musée de rester pertinent et attractif pour les visiteurs de tous âges.
+            En conclusion, le Musée Hongrois des Transports, par son architecture combinant l'ancien et le moderne, crée un cadre fascinant pour explorer l'histoire et l'évolution des moyens de transport en Hongrie. Il offre une expérience éducative et immersive, tout en célébrant l'héritage riche et dynamique de la mobilité.
+            </p>
+    </article>
+</div>
+
+
+
+<footer class="footer">
+    <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="/">Horaires</a></li>
+        <li><a href="/">Tarifs</a></li>
+        <li><a href="/">Mentions légales</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                <img
+                class="icones_instagram"
+                src="public/icones/instagram.svg"
+                alt="icone instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                <img
+                class="icones_twitter"
+                src="public/icones/twitter.svg"
+                alt="icone twitter"
+            /></a>
+          </li>
+            <li>
+                <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                    <img
+                    class="icones_facebook"
+                    src="public/icones/facebook.svg"
+                    alt="icone facebook"
+                /></a>
+    </ul>
+</footer>
 </body>
 </html>

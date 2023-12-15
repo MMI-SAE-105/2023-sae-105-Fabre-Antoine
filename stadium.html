@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    <header class="header">  
+        <div class="header__menu"> 
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu"
+            @click="menuIsOpen = !menuIsOpen">
+
+            </a>
+            <p class="titre__site">Exposition Eisenman</p>  
+            
+            <nav class="header__menu menu" :class="{actif: menuIsOpen}" x-show="menuIsOpen" >
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="/">Projets</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="./contact.html">Contact</a></li>
+                <li class="footer__item"><a href="/">Horaires</a></li>
+                <li class="footer__item"><a href="/">Tarifs</a></li>
+            </ul>
+            <ul class="footer__reseaux">
+                <li class="icones__reseaux--link">
+                    <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/instagram.svg"
+                        alt="icone instagram"
+                    /></a>
+                  </li>
+                  <li class="icones__reseaux--link">
+                    <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/twitter.svg"
+                        alt="icone twitter"
+                    /></a>
+                  </li>
+                    <li class="icones__reseaux--link">
+                        <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                            <img
+                            class="icones__reseaux"
+                            src="public/icones/facebook.svg"
+                            alt="icone facebook"
+                        /></a>
+                    </li>
+            
+            </ul>
+            </nav>
+        </div>
+    </header>
+<div>
+    <img class="image__top" class="image" src="public/img/stdium-1.webp" alt="stdium-1">
+    <article>
+        <h1>Farm State Stadium</h1>
+        <p>Le State Farm Stadium, situé à Glendale, Arizona, est un impressionnant stade multifonctionnel qui se distingue par son architecture innovante et sa polyvalence. Voici une brève présentation de son architecture :
+            Conception Architecturale : Conçu par le cabinet d'architectes populaire Populous (anciennement HOK Sport Venue Event), le State Farm Stadium arbore une architecture moderne et fonctionnelle. L'esthétique du stade est marquée par des lignes épurées, une structure ouverte et des éléments qui mettent en valeur la fonctionnalité du lieu.
+            Toit Rétractable et Pelouse Mobile : L'une des caractéristiques les plus remarquables du State Farm Stadium est son toit rétractable et sa pelouse mobile. Ce toit, constitué de panneaux translucides, peut s'ouvrir ou se fermer en fonction des conditions météorologiques, offrant une expérience unique aux spectateurs. De plus, la pelouse peut être déplacée à l'extérieur du stade pour favoriser la croissance et l'entretien.</p>
+        <img class="image" src="public/img/stadium-2.webp" alt="stadium-2">
+        <p>Polyvalence des Événements : Le design du State Farm Stadium est axé sur la polyvalence, ce qui permet au stade d'accueillir une variété d'événements sportifs et de divertissements. Des matchs de football américain de la NFL à des concerts en passant par des événements spéciaux, le stade est conçu pour s'adapter à différentes configurations.
+            Sièges Inclinables : Les spectateurs bénéficient de sièges inclinables qui offrent une vue optimale sur l'action, tandis que l'architecture générale du stade assure une excellente visibilité de n'importe quel siège.
+            Engagement Environnemental : L'architecture du State Farm Stadium intègre des éléments durables et écologiques, soulignant l'engagement envers la responsabilité environnementale. Des initiatives telles que la gestion de l'eau et l'utilisation d'énergie renouvelable contribuent à faire du stade une installation respectueuse de l'environnement.</p>
+        <img class="image" src="public/img/stadium-3.webp" alt="stadium-3">
+        <p>Technologie Avancée : Le stade est équipé de technologies de pointe, notamment des écrans géants, des systèmes audio de haute qualité et une connectivité Wi-Fi étendue pour améliorer l'expérience des spectateurs.
+            En conclusion, le State Farm Stadium se distingue par son design avant-gardiste et ses fonctionnalités innovantes qui en font un lieu de premier plan pour des événements variés. Son architecture combine esthétique moderne et ingénierie fonctionnelle, créant une expérience immersive pour les visiteurs et les spectateurs.
+            </p>
+    </article>
+</div>
+
+
+
+<footer class="footer">
+    <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="/">Horaires</a></li>
+        <li><a href="/">Tarifs</a></li>
+        <li><a href="/">Mentions légales</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                <img
+                class="icones_instagram"
+                src="public/icones/instagram.svg"
+                alt="icone instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                <img
+                class="icones_twitter"
+                src="public/icones/twitter.svg"
+                alt="icone twitter"
+            /></a>
+          </li>
+            <li>
+                <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                    <img
+                    class="icones_facebook"
+                    src="public/icones/facebook.svg"
+                    alt="icone facebook"
+                /></a>
+    </ul>
+</footer>
+</body>
+</html>
