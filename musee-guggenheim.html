@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
-<body>
-    
+<body x-data="{menuIsOpen: false}">
+    <header class="header">  
+        <div class="header__menu"> 
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu"
+            @click="menuIsOpen = !menuIsOpen">
+
+            </a>
+            <p class="titre__site">Exposition Eisenman</p>  
+            
+            <nav class="header__menu menu" :class="{actif: menuIsOpen}" x-show="menuIsOpen" >
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="/">Projets</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="./contact.html">Contact</a></li>
+                <li class="footer__item"><a href="/">Horaires</a></li>
+                <li class="footer__item"><a href="/">Tarifs</a></li>
+            </ul>
+            <ul class="footer__reseaux">
+                <li class="icones__reseaux--link">
+                    <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/instagram.svg"
+                        alt="icone instagram"
+                    /></a>
+                  </li>
+                  <li class="icones__reseaux--link">
+                    <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/twitter.svg"
+                        alt="icone twitter"
+                    /></a>
+                  </li>
+                    <li class="icones__reseaux--link">
+                        <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                            <img
+                            class="icones__reseaux"
+                            src="public/icones/facebook.svg"
+                            alt="icone facebook"
+                        /></a>
+                    </li>
+            
+            </ul>
+            </nav>
+        </div>
+    </header>
+<div>
+    <img class="image__top" class="image" src="public/img/musee-guggenheim-1.webp" alt="mémorial Berlin">
+    <article>
+        <h1>Musée Guggenheim Helsinki</h1>
+        <p>Le projet n'ait pas encore été réalisé , voici une idée de ce à quoi l'architecture du musée Guggenheim de Helsinki pourrait ressembler, en s'appuyant sur les plans et les rendus disponibles à ce moment-là.
+            L'architecture aurait probablement cherché à s'intégrer harmonieusement dans le paysage environnant tout en créant un impact visuel fort. Les matériaux modernes et innovants auraient probablement été utilisés pour refléter la nature dynamique et contemporaine du musée.
+            Comme les autres musées Guggenheim, le bâtiment aurait probablement été conçu pour accueillir des expositions variées d'art contemporain et moderne. Des espaces polyvalents et flexibles auraient probablement été intégrés pour répondre aux besoins des diverses formes d'art et aux installations interactives.</p>
+        <img class="image" src="public/img/musee-guggenheim-2.webp" alt="mémorial Berlin 2">
+        <p>L'architecture aurait probablement intégré des éléments de durabilité et d'innovation, alignés sur les normes contemporaines en matière de construction écologique. Cela aurait pu inclure des solutions énergétiques durables, des technologies de pointe et des espaces verts intégrés.
+            Étant donné la proximité de la ville avec la mer, le musée aurait probablement exploité la relation avec l'eau. Des vues panoramiques sur la mer Baltique et des espaces extérieurs pour les visiteurs auraient pu être envisagés pour améliorer l'expérience globale.
+        </p>
+</div>
+
+
+
+<footer class="footer">
+    <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="/">Horaires</a></li>
+        <li><a href="/">Tarifs</a></li>
+        <li><a href="/">Mentions légales</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                <img
+                class="icones_instagram"
+                src="public/icones/instagram.svg"
+                alt="icone instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                <img
+                class="icones_twitter"
+                src="public/icones/twitter.svg"
+                alt="icone twitter"
+            /></a>
+          </li>
+            <li>
+                <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                    <img
+                    class="icones_facebook"
+                    src="public/icones/facebook.svg"
+                    alt="icone facebook"
+                /></a>
+    </ul>
+</footer>
 </body>
 </html>
