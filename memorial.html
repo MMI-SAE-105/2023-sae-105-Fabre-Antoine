@@ -4,52 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./src/css/vendors/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
-<header class="header">
-    <div>
-        <a class="header__button-link" href="/">
-        <img class="header__button" src="public/icones/menu.svg" alt="bouton menu">
-        </a>
-        <p class="titre__site">Exposition Eisenman</p>
-        <nav class="header__menu menu">
-        <ul class="menu__list">
-            <li class="menu__item"><a href="informations.html">L'Exposition</a></li>
-            <li class="menu__item"><a href="presentation.html">Les Oeuvres</a></li>
-            <li class="menu__item"><a href="/">Projets</a></li>
-        </ul>
-        <ul class="footer__list">
-            <li class="footer__item"><a href="./contact.html">Contact</a></li>
-            <li class="footer__item"><a href="/">Horaires</a></li>
-            <li class="footer__item"><a href="/">Tarifs</a></li>
-        </ul>
-        <ul class="footer__reseaux">
-            <li class="icones__reseaux--link">
-                <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
-                    <img
-                    class="icones__reseaux"
-                    src="public/icones/instagram.svg"
-                    alt="icone instagram"
-                /></a>
-              </li>
-              <li class="icones__reseaux--link">
-                <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
-                    <img
-                    class="icones__reseaux"
-                    src="public/icones/twitter.svg"
-                    alt="icone twitter"
-                /></a>
-              </li>
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    <header class="header">  
+        <div class="header__menu"> 
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu"
+            @click="menuIsOpen = !menuIsOpen">
+
+            </a>
+            <p class="titre__site">Exposition Eisenman</p>  
+            
+            <nav class="header__menu menu" :class="{actif: menuIsOpen}" x-show="menuIsOpen" >
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="/">Projets</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="./contact.html">Contact</a></li>
+                <li class="footer__item"><a href="/">Horaires</a></li>
+                <li class="footer__item"><a href="/">Tarifs</a></li>
+            </ul>
+            <ul class="footer__reseaux">
                 <li class="icones__reseaux--link">
-                    <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                    <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
                         <img
                         class="icones__reseaux"
-                        src="public/icones/facebook.svg"
-                        alt="icone facebook"
+                        src="public/icones/instagram.svg"
+                        alt="icone instagram"
                     /></a>
-        </ul>
-    </div>
-</header>
+                  </li>
+                  <li class="icones__reseaux--link">
+                    <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/twitter.svg"
+                        alt="icone twitter"
+                    /></a>
+                  </li>
+                    <li class="icones__reseaux--link">
+                        <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                            <img
+                            class="icones__reseaux"
+                            src="public/icones/facebook.svg"
+                            alt="icone facebook"
+                        /></a>
+                    </li>
+            </ul>
+            </nav>
+        </div>
+    </header>
 <div>
     <img class="image__top" class="image" src="public/img/memorial-1.webp" alt="mémorial Berlin">
     <article>
@@ -72,7 +78,7 @@
 
 
 
-<footer class="footer">
+<footer >
     <ul>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="/">Horaires</a></li>
