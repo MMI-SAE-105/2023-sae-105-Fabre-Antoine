@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <link rel="stylesheet" href="./src/css/vendors/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
-<body>
+<body x-data="{expanded: false}">
     <header class="header">
-        <div>
+        
+            
+        <div class="header__menu"> 
             <a class="header__button-link" href="/">
-            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu">
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu" @click="expanded = ! expanded">
+
             </a>
-            <p class="titre__site">Exposition Eisenman</p>
-            <nav class="header__menu menu">
+            <p class="titre__site">Exposition Eisenman</p>  
+            
+            <nav class="header__menu menu" :class="{actif: expanded}">
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
                 <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
