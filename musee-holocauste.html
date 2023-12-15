@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
-<body>
-    
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    <header class="header">  
+        <div class="header__menu"> 
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu"
+            @click="menuIsOpen = !menuIsOpen">
+
+            </a>
+            <p class="titre__site">Exposition Eisenman</p>  
+            
+            <nav class="header__menu menu" :class="{actif: menuIsOpen}" x-show="menuIsOpen" >
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="/">Projets</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="./contact.html">Contact</a></li>
+                <li class="footer__item"><a href="/">Horaires</a></li>
+                <li class="footer__item"><a href="/">Tarifs</a></li>
+            </ul>
+            <ul class="footer__reseaux">
+                <li class="icones__reseaux--link">
+                    <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/instagram.svg"
+                        alt="icone instagram"
+                    /></a>
+                  </li>
+                  <li class="icones__reseaux--link">
+                    <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/twitter.svg"
+                        alt="icone twitter"
+                    /></a>
+                  </li>
+                    <li class="icones__reseaux--link">
+                        <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                            <img
+                            class="icones__reseaux"
+                            src="public/icones/facebook.svg"
+                            alt="icone facebook"
+                        /></a>
+                    </li>
+            
+            </ul>
+            </nav>
+        </div>
+    </header>
+<div>
+    <img class="image__top" class="image" src="public/img/musee-holocauste-1.webp" alt="musee-holocauste-1">
+    <article>
+        <h1>Musée de l'Holocauste</h1>
+        <p>Le Musée de l'Holocauste de Montréal est une institution poignante dédiée à la mémoire des victimes de l'Holocauste et à la préservation de l'histoire de cette période sombre. Niché dans le quartier historique du Mile End à Montréal, le musée offre une expérience immersive unique, tant par son contenu que par son architecture soigneusement conçue.
+            Situé au cœur du quartier Mile End, le musée trouve sa place au sein d'une communauté dynamique. Son architecture, sobre et respectueuse, se fond dans le tissu urbain tout en attirant l'attention par sa simplicité éloquente.</p>
+        <img class="image" src="public/img/musee-holocauste-2.webp" alt="musee-holocauste-2">
+        <p>L'entrée du musée est marquée par une architecture emblématique. Une façade de verre symbolise la transparence et l'ouverture, invitant les visiteurs à entrer dans un espace qui encourage la réflexion et la commémoration.
+            L'intérieur du musée est conçu de manière à créer une expérience visuelle et émotionnelle profonde. Des salles d'exposition épurées et des espaces d'histoire interactive guident les visiteurs à travers le récit de l'Holocauste, offrant des perspectives variées et des témoignages personnels.</p>
+    </article>
+</div>
+
+
+
+<footer class="footer">
+    <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="/">Horaires</a></li>
+        <li><a href="/">Tarifs</a></li>
+        <li><a href="/">Mentions légales</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                <img
+                class="icones_instagram"
+                src="public/icones/instagram.svg"
+                alt="icone instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                <img
+                class="icones_twitter"
+                src="public/icones/twitter.svg"
+                alt="icone twitter"
+            /></a>
+          </li>
+            <li>
+                <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                    <img
+                    class="icones_facebook"
+                    src="public/icones/facebook.svg"
+                    alt="icone facebook"
+                /></a>
+    </ul>
+</footer>
 </body>
 </html>
