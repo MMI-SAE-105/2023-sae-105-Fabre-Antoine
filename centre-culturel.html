@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
-<body>
-    
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    <header class="header">  
+        <div class="header__menu"> 
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu"
+            @click="menuIsOpen = !menuIsOpen">
+
+            </a>
+            <p class="titre__site">Exposition Eisenman</p>  
+            
+            <nav class="header__menu menu" :class="{actif: menuIsOpen}" x-show="menuIsOpen" >
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__item--lien" href="/">Projets</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="./contact.html">Contact</a></li>
+                <li class="footer__item"><a href="/">Horaires</a></li>
+                <li class="footer__item"><a href="/">Tarifs</a></li>
+            </ul>
+            <ul class="footer__reseaux">
+                <li class="icones__reseaux--link">
+                    <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/instagram.svg"
+                        alt="icone instagram"
+                    /></a>
+                  </li>
+                  <li class="icones__reseaux--link">
+                    <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                        <img
+                        class="icones__reseaux"
+                        src="public/icones/twitter.svg"
+                        alt="icone twitter"
+                    /></a>
+                  </li>
+                    <li class="icones__reseaux--link">
+                        <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                            <img
+                            class="icones__reseaux"
+                            src="public/icones/facebook.svg"
+                            alt="icone facebook"
+                        /></a>
+                    </li>
+            
+            </ul>
+            </nav>
+        </div>
+    </header>
+<div>
+    <img class="image__top" class="image" src="public/img/centre-culturel-1.webp" alt="centre-culturel-1">
+    <article>
+        <h1>Centre Culturel Taichung</h1>
+        <p>Le Centre Culturel de la Ville de Taichung est une merveille architecturale qui incarne la richesse culturelle de la ville. Le design de ce lieu emblématique marie harmonieusement tradition et modernité, créant un espace qui invite les visiteurs à explorer, apprendre et s'immerger dans la diversité culturelle.
+            L'architecture du Centre Culturel de la Ville de Taichung est une fusion élégante de styles architecturaux contemporains et traditionnels taïwanais. Les lignes épurées et les formes modernes s'entrelacent avec des éléments traditionnels, établissant un équilibre visuel qui reflète la dualité de la culture locale.
+            </p>
+        <img class="image" src="public/img/centre-culturel-2.webp" alt="mémorial Berlin 2">
+        <p>Chaque aspect du design est pensé de manière fonctionnelle et élégante. Des salles d'exposition polyvalentes aux auditoriums modernes, l'architecture offre des espaces adaptés à une variété d'activités culturelles, des expositions artistiques aux performances théâtrales.
+            Le Centre Culturel s'intègre harmonieusement dans le paysage environnant. Des jardins soigneusement aménagés, des cours intérieures et des espaces verts offrent des lieux de détente et de contemplation, créant un dialogue continu entre l'architecture et la nature.
+            </p>
+    </article>
+</div>
+
+
+
+<footer class="footer">
+    <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="/">Horaires</a></li>
+        <li><a href="/">Tarifs</a></li>
+        <li><a href="/">Mentions légales</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/fondationcartier/" aria-label="instagram">
+                <img
+                class="icones_instagram"
+                src="public/icones/instagram.svg"
+                alt="icone instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Fond_Cartier" aria-label="twitter">
+                <img
+                class="icones_twitter"
+                src="public/icones/twitter.svg"
+                alt="icone twitter"
+            /></a>
+          </li>
+            <li>
+                <a href="https://www.facebook.com/fondationcartier" aria-label="facebook">
+                    <img
+                    class="icones_facebook"
+                    src="public/icones/facebook.svg"
+                    alt="icone facebook"
+                /></a>
+    </ul>
+</footer>
 </body>
 </html>
