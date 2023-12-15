@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,16 @@
     <link rel="stylesheet" href="/src/css/style.css">
     <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
-<body x-data="{expanded: false}">
-    <header class="header">
-        
-            
+<body x-data="{menuIsOpen: false}" >
+    <header class="header">  
         <div class="header__menu"> 
-            <a class="header__button-link" href="/">
-            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu" @click="expanded = ! expanded">
+            <img class="header__button" src="public/icones/menu.svg" alt="bouton menu"
+            @click="menuIsOpen = !menuIsOpen">
 
             </a>
             <p class="titre__site">Exposition Eisenman</p>  
             
-            <nav class="header__menu menu" :class="{actif: expanded}">
+            <nav class="header__menu menu" :class="{actif: menuIsOpen}" x-show="menuIsOpen" >
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__item--lien" href="informations.html">L'Exposition</a></li>
                 <li class="menu__item"><a class="menu__item--lien" href="presentation.html">Les Oeuvres</a></li>
